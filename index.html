@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flower Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Flower Shop</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <button onclick="viewCart()">Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-text">
+            <h1>Fresh Flowers, Delivered to Your Doorstep</h1>
+            <p>Brighten up your day with beautiful flowers from our shop.</p>
+            <button onclick="shopNow()">Shop Now</button>
+        </div>
+    </section>
+
+    <section id="products" class="product-section">
+        <h2>Our Beautiful Flowers</h2>
+        <div class="product-list">
+            <div class="product-card" data-name="Roses" data-price="25.00">
+                <img src="/flower1.jpg.jpg" alt="Flower 1">
+                <h3>Roses</h3>
+                <p>$25.00</p>
+                <button onclick="addToCart('Roses', 25.00)">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="Tulips" data-price="20.00">
+                <img src="/flower2.jpg.jpg" alt="Flower 2">
+                <h3>Tulips</h3>
+                <p>$20.00</p>
+                <button onclick="addToCart('Tulips', 20.00)">Add to Cart</button>
+            </div>
+            <div class="product-card" data-name="Lilies" data-price="30.00">
+                <img src="/flower3.jpg.jpg" alt="Flower 3">
+                <h3>Lilies</h3>
+                <p>$30.00</p>
+                <button onclick="addToCart('Lilies', 30.00)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Flower Shop | All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
